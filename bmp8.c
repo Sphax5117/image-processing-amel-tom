@@ -1,10 +1,14 @@
 #include " bmp8.h"
 
-t_bmp8 * bmp8_loadImage(const char * filename) {
+int bmp8_loadImage(const char * filename) {
     FILE * file = fopen(filename, "rb");
     if (!file) {
-        printf("Error when opening the file");
+        fprintf(stderr, "Error: Unable to open file %s\n", filename);
+        return NULL;
+    } else {
+        printf("File opened sucessfully");
     }
+    return 0;
  }
 
 
