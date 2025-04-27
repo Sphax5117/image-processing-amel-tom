@@ -1,5 +1,8 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.31)
+project(project_c_Amel_Tom C)
 
-project(image_processing_amel_tom)
+set(CMAKE_C_STANDARD 11)
 
-add_executable(image_processing_amel_tom main.c)
+add_executable(project_c_Amel_Tom main.c
+        bmp8.c
+        bmp8.h)
